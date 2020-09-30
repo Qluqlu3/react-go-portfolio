@@ -10,6 +10,14 @@ const Wrapper = Styled("div")`
   width: 100%;
   height: 80px;
   background: #FF9900;
+  color: #FFF;
+`;
+
+const Title = Styled("div")`
+  flex: 1;
+  margin-left: 20px;
+  font-size: 23px;
+  font-weight: bold;
 `;
 
 const LinkBox = Styled("div")`
@@ -21,20 +29,24 @@ const LinkBox = Styled("div")`
   text-align: center;
   background: #FF8800;
   cursor: pointer;
+  &:hover {
+    background: #FFAA00;
+  }
   a {
     font-size: 20px;
     font-weight: bold;
+    text-decoration: none;
     color: #FFF;
-    text-decoration: none
   }
 `;
 
 const NavBar = () => {
   return (
     <Wrapper>
+      <Title>サイトタイトル</Title>
       <Router>
         <LinkBox>
-          <Link to="/top">トップ</Link>
+          <Link to="/home">ホーム</Link>
         </LinkBox>
         <LinkBox>
           <Link to="/details">詳細</Link>
